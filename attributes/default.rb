@@ -182,7 +182,7 @@ default['solrcloud']['shared_lib']  = ::File.join(node['solrcloud']['install_dir
 # Solr default configSets directory
 default['solrcloud']['config_sets'] = ::File.join(node['solrcloud']['solr_home'], 'configsets')
 
-default['solrcloud']['zk_run_data_dir']  = ::File.join(node['solrcloud']['install_dir'], 'zookeeperdata')
+default['solrcloud']['zk_run_data_dir'] = ::File.join(node['solrcloud']['install_dir'], 'zookeeperdata')
 
 # Set zkHost for zookeeper configSet management
 default['solrcloud']['solr_config']['solrcloud']['zk_host'] = ["#{node['ipaddress']}:#{node['solrcloud']['zk_run_port']}"] if node['solrcloud']['zk_run']
@@ -198,7 +198,7 @@ default['solrcloud']['source_dir']      = '/usr/local/solr-' + node['solrcloud']
 default['solrcloud']['tarball']['url']  = "https://archive.apache.org/dist/lucene/solr/#{node['solrcloud']['version']}/solr-#{node['solrcloud']['version']}.tgz"
 default['solrcloud']['tarball']['md5']  = '316f11ed8e81cf07ebfa6ad9443add09'
 
-default['solrcloud']['key_store']['key_store_file_path']  = ::File.join(node['solrcloud']['install_dir'], 'etc', node['solrcloud']['key_store']['key_store_file'])
+default['solrcloud']['key_store']['key_store_file_path'] = ::File.join(node['solrcloud']['install_dir'], 'etc', node['solrcloud']['key_store']['key_store_file'])
 
 default['solrcloud']['jmx']['password_file']  = ::File.join(node['solrcloud']['install_dir'], 'resources', 'jmxremote.password')
 default['solrcloud']['jmx']['access_file']    = ::File.join(node['solrcloud']['install_dir'], 'resources', 'jmxremote.access')
